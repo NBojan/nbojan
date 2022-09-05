@@ -6,7 +6,10 @@ const airtable = new Airtable({ apiKey: process.env.REACT_APP_AIR_KEY })
   .table('products')
 
 exports.handler = async (event, context) => {
-    const data = await airtable.list();
+    const data = await airtable.list({
+        maxRecords: 100,
+        pageSize: 100
+    });
     console.log(data);
     if(data.records){
         const products = data.records.map(record => {
