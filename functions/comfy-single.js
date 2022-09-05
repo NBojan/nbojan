@@ -19,6 +19,9 @@ exports.handler = async (event, context) => {
             const { id, fields: {stock, price, shipping, featured, colors, category, images, reviews, stars, name, description, company} } = data;
             const singleProduct = {id, stock, price, shipping, featured, colors, category, images, reviews, stars, name, description, company};
             return {
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
                 statusCode: 200,
                 body: JSON.stringify(singleProduct)
             } 
