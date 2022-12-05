@@ -2040,7 +2040,7 @@ h5 {
 .underline {
 	width: 128px;
 	height: 4px;
-	background: hsl(205, 78%, 60%);;
+	background: #fff;
 	margin: 0 auto;
 	border-radius: 12px;
   }
@@ -2111,9 +2111,9 @@ h5 {
 	width: 6rem;
 	height: 6rem;
 	margin: 0 auto;
-	margin-top: 10rem;
+	margin-top: 5rem;
 	border-radius: 50%;
-	border: 3px solid #ccc;
+	border: 3px solid #fff;
 	border-top-color: var(--clr-primary-5);
 	animation: spinner 0.6s linear infinite;
 }

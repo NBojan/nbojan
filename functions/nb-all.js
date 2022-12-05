@@ -13,8 +13,8 @@ exports.handler = async (event, context) => {
 
     if(data.records){
         const projects = data.records.map(project => {
-            const { id, fields: {name, descr, images, url, gitUrl} } = project;
-            return { id, name, descr, images, url, gitUrl }
+            const { id, fields: {name, descr, images, url, gitUrl, featured} } = project;
+            return { id, name, descr, images, url, gitUrl, featured }
         })
         return {
             headers: {

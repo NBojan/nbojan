@@ -66,7 +66,54 @@ body {
   background-color: var(--clr-mainBack);
   line-height: 1.5;
 }
+h1,h2,h3,h4,h5 {
+  color: #262534;
+}
+.light-col {
+  color: var(--clr-grey-4);
+}
 
+.page {
+  min-height: calc(100vh - 80px);
+}
+.w100 {
+  width: 100%;
+}
+
+.btn-prim {
+	color: #fff;
+	background-color: var(--clr-primary-5);
+	border-color: var(--clr-primary-5);
+}
+.btn-prim:hover {
+	background-color: var(--clr-primary-4);
+	border-color: var(--clr-primary-4);
+}
+
+.shadow {
+  box-shadow: var(--light-shadow);
+}
+.shadow:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.hideScroll {
+  opacity: 0;
+  visibility: hidden;
+}
+.showScroll {
+  opacity: 1;
+  visibility: visible;
+}
+
+.refresh-btn {
+  color: #fff;
+  background-color: #e65b77;
+  letter-spacing: .5px;
+}
+.refresh-btn:hover {
+  background-color: #ff7490;
+}
 
 @media (min-width: 1400px){
 
