@@ -118,7 +118,6 @@ const Wrapper = styled.div`
     }
 
     .card-title {
-        font-family: "Quicksand";
         text-transform: capitalize;
     }
     .featured {

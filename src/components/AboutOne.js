@@ -37,9 +37,9 @@ const Wrapper = styled.section`
     }
     .info-div {
         flex-basis: 41%;
-        font-family: "Quicksand";
         p {
             line-height: 2;
+            letter-spacing: 1px;
         }
     }
     h3 {
