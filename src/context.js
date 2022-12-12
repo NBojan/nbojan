@@ -10,7 +10,7 @@ const initialState = {
     err: false
 }
 
-const url = "http://localhost:8888/api/nb-all";
+const url = "https://nbojan.netlify.app/api/nb-all";
 
 const AppContext = createContext();
 
