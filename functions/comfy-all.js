@@ -10,7 +10,7 @@ exports.handler = async (event, context) => {
         maxRecords: 100,
         pageSize: 100
     });
-
+    console.log(data);
     if(data.records){
         const products = data.records.map(record => {
             const { id } = record;

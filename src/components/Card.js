@@ -118,10 +118,11 @@ const Wrapper = styled.div`
     }
 
     .card-title {
+        font-family: "Quicksand";
         text-transform: capitalize;
     }
     .featured {
-        color: #ff6584;
+        color: #6366f1;
     }
     .desc {
         font-size: 15px;
