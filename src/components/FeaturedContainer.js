@@ -21,9 +21,7 @@ const FeaturedContainer = () => {
  
 const Wrapper = styled.section`
     padding: 48px 0;
-    background-color: var(--clr-primary-4);
-    //background: linear-gradient(135deg, rgba(147,197,253,1) 0%, rgba(96,165,250,1) 35%, rgba(59,130,246,1) 70%, rgba(37,99,235,1) 100%);
-    //background-color: #262534;
+    background-color: var(--clr-primary-5);
 
     .title {
         text-align: center;

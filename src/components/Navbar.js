@@ -7,7 +7,7 @@ const Navbar = () => {
         <Wrapper>
             <nav className="containerBoot m-auto">
                 <Link to="/" className="logo-div lh-0">
-                    <img src={logo} alt="NBojan" className="w100" />
+                    <img src={logo} alt="NBojan"  />
                 </Link>
 
                 <Link to="/about" className="btn btn-m btn-prim about-btn capitalize">about</Link>

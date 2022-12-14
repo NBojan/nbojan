@@ -30,7 +30,7 @@ const ErrWrapper = styled.div`
     text-align: center;
 
     h4 {
-        color: #cc516a;
+        color: #e0e7ff;
     }
 `
 export default Projects;

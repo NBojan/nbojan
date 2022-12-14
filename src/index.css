@@ -3,16 +3,16 @@
 
 
 :root {
-  --clr-primary-50: #eff6ff;
-  --clr-primary-1: #dbeafe;
-  --clr-primary-2: #bfdbfe;
-  --clr-primary-3: #93c5fd;
-  --clr-primary-4: #60a5fa;
-  --clr-primary-5: #3b82f6;
-  --clr-primary-6: #2563eb;
-  --clr-primary-7: #1d4ed8;
-  --clr-primary-8: #1e40af;
-  --clr-primary-9: #1e3a8a;
+  --clr-primary-50: #eef2ff;
+  --clr-primary-1: #e0e7ff;
+  --clr-primary-2: #c7d2fe;
+  --clr-primary-3: #a5b4fc;
+  --clr-primary-4: #818cf8;
+  --clr-primary-5: #6366f1;
+  --clr-primary-6: #4f46e5;
+  --clr-primary-7: #4338ca;
+  --clr-primary-8: #3730a3;
+  --clr-primary-9: #312e81;
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
@@ -108,12 +108,13 @@ h1,h2,h3,h4,h5 {
 }
 
 .refresh-btn {
-  color: #fff;
-  background-color: #e65b77;
+  color: var(--clr-primary-9);
+  background-color: var(--clr-primary-1);
   letter-spacing: .5px;
 }
 .refresh-btn:hover {
-  background-color: #ff7490;
+  color: var(--clr-primary-1);
+  background-color: var(--clr-primary-9);
 }
 
 @media (min-width: 1400px){
