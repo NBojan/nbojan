@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import errorImg from "../assets/images/stars.svg";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (  
