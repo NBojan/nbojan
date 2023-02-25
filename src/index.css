@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap');
 
-
 :root {
   --clr-primary-50: #eef2ff;
   --clr-primary-1: #e0e7ff;
@@ -47,38 +46,36 @@
   --headingFont: 'Roboto Condensed', Sans-Serif;
   --bodyFont: 'Cabin', Sans-Serif;
 }
-.primary-variations {
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  --clr-primary-5: hsl(205, 78%, 60%);
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-}
 /**/
 body {
-  font-family: var(--bodyFont);
-  color: var(--clr-black);
-  background-color: var(--clr-mainBack);
   line-height: 1.5;
+  color: var(--clr-black);
+  font-family: var(--bodyFont);
+  background-color: var(--clr-white);
 }
 h1,h2,h3,h4,h5 {
   font-family: "Quicksand";
-  color: #262534;
+  color: var(--clr-grey-1);
+}
+button, input, textarea {
+  font-family: var(--bodyFont);
 }
 .light-col {
   color: var(--clr-grey-4);
 }
-
 .page {
   min-height: calc(100vh - 80px);
 }
+.full-page {
+  min-height: calc(100vh - 80px - 80px);
+}
 .w100 {
   width: 100%;
+}
+.title {
+  text-transform: capitalize;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .btn-prim {
@@ -115,6 +112,41 @@ h1,h2,h3,h4,h5 {
 .refresh-btn:hover {
   color: var(--clr-primary-1);
   background-color: var(--clr-primary-9);
+}
+
+.bg-filler {
+  margin-top: -5rem;
+}
+@media(max-width: 991px){
+  .bg-filler {
+    margin-top: 0px;
+  }
+  .page {
+    min-height: calc(100vh - 80px - 80px);
+  }
+}
+
+/*sidebar*/
+.sidebar {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+@media (max-width: 767px){
+  .show-side {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (min-width: 1400px){

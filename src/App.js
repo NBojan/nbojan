@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HomePage, AboutPage, ErrorPage, SharedLayout } from "./pages";
+import { HomePage, AboutPage, ErrorPage, ContactPage, SharedLayout } from "./pages";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>

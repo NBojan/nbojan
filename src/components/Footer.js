@@ -21,7 +21,7 @@ const Wrapper = styled.footer`
     align-items: center;
     justify-content: center;
     height: 80px;
-    background-color: #262534;
+    background-color: var(--clr-darkmode2);
 
     p {
         color: #fff;

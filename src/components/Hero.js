@@ -3,7 +3,7 @@ import heroImg from "../assets/images/programming.svg";
 
 const Hero = () => {
     return (  
-        <Wrapper className="page hero">
+        <Wrapper className="page hero bg-filler">
             <article className="containerBoot m-auto container">
                 <div className="info-div">
                     <h2 className="capitalize">Project page <span>NBojan</span></h2>
@@ -23,8 +23,8 @@ const Hero = () => {
 
 const Wrapper = styled.section`
     display: flex;
-    padding: 24px 0;
-    //background: linear-gradient(270deg, rgba(239,246,255,1) 0%, rgba(191,219,254,1) 100%);
+    padding: 7rem 0 2rem;
+    background: linear-gradient(90deg, var(--clr-primary-1) 60%, rgba(255,255,255,1) 60%);
 
     .container {
         width: 100%;
@@ -41,6 +41,7 @@ const Wrapper = styled.section`
         font-family: "Quicksand";
         p {
             line-height: 2;
+            font-weight: 500;
         }
     }
     h2 {
@@ -49,6 +50,10 @@ const Wrapper = styled.section`
         }
     }
 
+    @media(max-width: 991px){
+        padding: 2rem 0;
+        background: var(--clr-primary-1);
+    }
     @media (max-width: 767px){
         .image-div {
             display: none;

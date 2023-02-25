@@ -7,6 +7,7 @@ const ProjectsContainer = () => {
 
     return (  
         <Wrapper>
+            <div className="w100"></div>
             <article className="containerBoot m-auto">
                 <div className="title">
                     <h3>NB Projects</h3>
@@ -21,7 +22,8 @@ const ProjectsContainer = () => {
  
 const Wrapper = styled.section`
     padding: 64px 0;
-    background: linear-gradient(5deg, rgba(81,81,93,1) 50%, rgba(38,37,52,1) 50%);
+    //background: linear-gradient(5deg, rgba(81,81,93,1) 50%, rgba(38,37,52,1) 50%);
+    background: linear-gradient(5deg, rgba(81,81,93,1) 50%, var(--clr-darkmode2) 50%);
 
     .title {
         text-align: center;

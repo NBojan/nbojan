@@ -1,4 +1,4 @@
-import { SET_LOADING, SET_ERROR, SET_PROJECTS } from "./assets/actions";
+import { SET_LOADING, SET_ERROR, SET_PROJECTS } from "./assets/constants/actions";
 
 const reducer = (state, action) => {
     if(action.type === SET_LOADING){

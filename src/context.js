@@ -1,7 +1,7 @@
 import axios from "axios";
 import reducer from "./reducer";
 import { createContext, useContext, useReducer, useState, useEffect } from "react";
-import { SET_LOADING, SET_ERROR, SET_PROJECTS } from "./assets/actions";
+import { SET_LOADING, SET_ERROR, SET_PROJECTS } from "./assets/constants/actions";
 
 const initialState = {
     isLoading: true,
@@ -17,6 +17,8 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const [showScrollTop, setShowScrollTop] = useState(false);
+    const [showSide, setShowSide] = useState(false);
+    const toggleSide = () => setShowSide(!showSide);
     
     const fetchData = async () => {
         dispatch({type: SET_LOADING});
@@ -41,7 +43,7 @@ export const AppProvider = ({ children }) => {
     }, [])
 
     return (
-        <AppContext.Provider value={{...state, fetchData, showScrollTop}}>
+        <AppContext.Provider value={{...state, fetchData, showScrollTop, showSide, toggleSide}}>
             {children}
         </AppContext.Provider>    
     ) 

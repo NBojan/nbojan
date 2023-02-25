@@ -92,16 +92,18 @@ const Wrapper = styled.div`
     }
     .chev-btn {
         display: flex;
-        background-color: transparent;
-        border: transparent;
         cursor: pointer;
+        border: transparent;
         color: var(--clr-grey-1);
+        transition: all .2s ease;
+        background-color: transparent;
         svg {
             width: 24px;
             height: 24px;
         }
     }
     .chev-btn:hover {
+        transform: scale(1.5);
         color: var(--clr-grey-5);
     }
 

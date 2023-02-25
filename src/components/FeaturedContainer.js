@@ -21,7 +21,7 @@ const FeaturedContainer = () => {
  
 const Wrapper = styled.section`
     padding: 48px 0;
-    background-color: var(--clr-primary-5);
+    background-color: var(--clr-primary-4);
 
     .title {
         text-align: center;
