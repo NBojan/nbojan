@@ -1,4 +1,5 @@
-import { SET_LOADING, SET_ERROR, SET_PROJECTS } from "./assets/constants/actions";
+import { getUniqueTypes } from "./assets/constants/utils";
+import { SET_LOADING, SET_ERROR, SET_PROJECTS, FILTER } from "./assets/constants/actions";
 
 const reducer = (state, action) => {
     if(action.type === SET_LOADING){
@@ -10,9 +11,18 @@ const reducer = (state, action) => {
     if(action.type === SET_PROJECTS){
         const featuredProjects = action.payload.filter(project => {
             if(project.featured) return project
-        })
-        return {...state, projects: action.payload, featured: featuredProjects, err: false, isLoading: false }
-    }    
+        });
+        const uniqueTypes = getUniqueTypes(action.payload);
+        return {...state, projects: action.payload, featured: featuredProjects, displayedProjects: action.payload, types: uniqueTypes, err: false, isLoading: false }
+    }
+    if(action.type === FILTER){
+        const filterType = action.payload;
+        if(filterType === "all") return {...state, displayedProjects: state.projects}
+        else {
+            const tmpArray = state.projects.filter(project => project.type === filterType)
+            return {...state, displayedProjects: tmpArray}
+        }
+    }
     else {
         console.log(`no matching action type for ${action.type}`)
         return state;

@@ -1,12 +1,14 @@
 import axios from "axios";
 import reducer from "./reducer";
 import { createContext, useContext, useReducer, useState, useEffect } from "react";
-import { SET_LOADING, SET_ERROR, SET_PROJECTS } from "./assets/constants/actions";
+import { SET_LOADING, SET_ERROR, SET_PROJECTS, FILTER } from "./assets/constants/actions";
 
 const initialState = {
     isLoading: true,
     projects: [],
     featured: [],
+    displayedProjects: [],
+    types: [],
     err: false
 }
 
@@ -30,7 +32,7 @@ export const AppProvider = ({ children }) => {
             dispatch({type: SET_PROJECTS, payload: response.data});
         }
     }
-
+    const filter = (type) => dispatch({type: FILTER, payload: type});
     const checkScroll = () => window.scrollY >= window.innerHeight ? setShowScrollTop(true) : setShowScrollTop(false);
 
     useEffect(() => {
@@ -43,7 +45,7 @@ export const AppProvider = ({ children }) => {
     }, [])
 
     return (
-        <AppContext.Provider value={{...state, fetchData, showScrollTop, showSide, toggleSide}}>
+        <AppContext.Provider value={{...state, fetchData, showScrollTop, showSide, toggleSide, filter}}>
             {children}
         </AppContext.Provider>    
     ) 

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 :root {
   --clr-primary-50: #eef2ff;
@@ -43,7 +43,7 @@
   --clr-black: #222;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --headingFont: 'Roboto Condensed', Sans-Serif;
+  --headingFont: "Quicksand";
   --bodyFont: 'Cabin', Sans-Serif;
 }
 /**/
@@ -54,7 +54,7 @@ body {
   background-color: var(--clr-white);
 }
 h1,h2,h3,h4,h5 {
-  font-family: "Quicksand";
+  font-family: var(--headingFont);
   color: var(--clr-grey-1);
 }
 button, input, textarea {
@@ -64,11 +64,12 @@ button, input, textarea {
   color: var(--clr-grey-4);
 }
 .page {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 5rem);
 }
 .full-page {
-  min-height: calc(100vh - 80px - 80px);
+  min-height: calc(100vh - 5rem - 5rem);
 }
+.section { padding: 64px 0; }
 .w100 {
   width: 100%;
 }
@@ -88,12 +89,8 @@ button, input, textarea {
 	border-color: var(--clr-primary-4);
 }
 
-.shadow {
-  box-shadow: var(--light-shadow);
-}
-.shadow:hover {
-  box-shadow: var(--dark-shadow);
-}
+.shadow { box-shadow: var(--light-shadow); }
+.shadow:hover { box-shadow: var(--dark-shadow); }
 
 .hideScroll {
   opacity: 0;
@@ -122,7 +119,7 @@ button, input, textarea {
     margin-top: 0px;
   }
   .page {
-    min-height: calc(100vh - 80px - 80px);
+    min-height: calc(100vh - 5rem - 5rem);
   }
 }
 
@@ -137,7 +134,6 @@ button, input, textarea {
     transform: translateX(0);
   }
 }
-
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -165,5 +161,5 @@ button, input, textarea {
 
 }
 @media (max-width: 575px){
-
+  .section { padding: 48px; }
 }

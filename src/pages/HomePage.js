@@ -1,11 +1,11 @@
-import { FeaturedContainer, Hero, ProjectsContainer } from "../components";
+import { Hero, Featured, AllProjects } from "../components";
 
 const HomePage = () => {
     return (  
         <>
             <Hero />
-            <FeaturedContainer />
-            <ProjectsContainer />
+            <Featured />
+            <AllProjects />
         </>
     );
 }

@@ -3,7 +3,7 @@ import heroImg from "../assets/images/programming.svg";
 
 const Hero = () => {
     return (  
-        <Wrapper className="page hero bg-filler">
+        <Wrapper className="hero bg-filler">
             <article className="containerBoot m-auto container">
                 <div className="info-div">
                     <h2 className="capitalize">Project page <span>NBojan</span></h2>
@@ -23,6 +23,7 @@ const Hero = () => {
 
 const Wrapper = styled.section`
     display: flex;
+    min-height: 100vh;
     padding: 7rem 0 2rem;
     background: linear-gradient(90deg, var(--clr-primary-1) 60%, rgba(255,255,255,1) 60%);
 

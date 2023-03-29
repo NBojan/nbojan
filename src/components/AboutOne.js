@@ -9,7 +9,7 @@ const AboutOne = () => {
                 <div className="info-div">
                     <h3 className="capitalize">hey, <span>nice to meet you!</span></h3>
                     <p className="light-col">
-                        My name is Bojan and this page represents my creative space, where just with a flew clicks you can view some of my projects.
+                        My name is Bojan and this page represents my creative space, where just with a few clicks you can view some of my projects.
                         On that note feel free to explore the page and review my work.
                     </p>
                 </div>

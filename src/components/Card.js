@@ -82,19 +82,24 @@ const Wrapper = styled.div`
 
     .chevs {
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
         width: 100%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
+        height: 100%;
         padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chevs:hover .chev-btn {
+        opacity: 1;
     }
     .chev-btn {
         display: flex;
+        opacity: 0;
         cursor: pointer;
         border: transparent;
-        color: var(--clr-grey-1);
+        color: var(--clr-grey-6);
         transition: all .2s ease;
         background-color: transparent;
         svg {
@@ -104,7 +109,7 @@ const Wrapper = styled.div`
     }
     .chev-btn:hover {
         transform: scale(1.5);
-        color: var(--clr-grey-5);
+        color: var(--clr-grey-4);
     }
 
     .info-div {
