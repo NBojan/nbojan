@@ -10,7 +10,7 @@ exports.handler = async (event, context) => {
         maxRecords: 50,
         pageSize: 50
     });
-
+    console.log(data)
     if(data.records){
         const projects = data.records.map(project => {
             const { id, fields: {name, descr, images, url, gitUrl, featured, type} } = project;
@@ -20,11 +20,13 @@ exports.handler = async (event, context) => {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             },
+            crossorigin: "anonymous",
             statusCode: 200,
             body: JSON.stringify(projects)
         }
     }
     else {
+        console.log(data)
         return {
             statusCode: 500,
             body: "There was an error."
