@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
 const Filters = () => {
     const { types, filter } = useGlobalContext();

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
 
-const Card = ({ name, descr, gitUrl, images, url, featured }) => {
+const Card = ({ name, descr, gitUrl, images, url, featured, type, isQa }) => {
     const [index, setIndex] = useState(0);
     const [read, setRead] = useState(false);
 
@@ -32,7 +32,8 @@ const Card = ({ name, descr, gitUrl, images, url, featured }) => {
 
             <div className="info-div">
                 <header>
-                    <h4 className={featured ? "card-title featured" :`card-title`}>{name}{featured && "*"}</h4>
+                    <h4 className={featured ? "card-title featured" :`card-title`}>{name}</h4>
+                    {isQa && <p className="capitalize">{type}</p>}
                     <p className="desc">
                         {read ? `${descr} ` : `${descr.slice(0,81)}... `}
                         <span className="read-more" onClick={() => setRead(!read)}>{read ? "read less" : "read more"}</span>
@@ -40,7 +41,7 @@ const Card = ({ name, descr, gitUrl, images, url, featured }) => {
                 </header>
                 <footer>
                     <a href={gitUrl} target="_blank" rel="noreferrer" className="btn btn-s git-btn">Github</a>
-                    <a href={url} target="_blank" rel="noreferrer" className="btn btn-s btn-prim">Visit</a>
+                    {!isQa && <a href={url} target="_blank" rel="noreferrer" className="btn btn-s btn-prim">Visit</a>}
                 </footer>
             </div>
         </Wrapper>

@@ -9,18 +9,32 @@ const reducer = (state, action) => {
         return {...state, isLoading: false, err: action.payload }
     }
     if(action.type === SET_PROJECTS){
-        const featuredProjects = action.payload.filter(project => {
+        const { projectsWeb, projectsQa } = action.payload;
+        const featuredWebProjects = projectsWeb.filter(project => {
             if(project.featured) return project
         });
-        const uniqueTypes = getUniqueTypes(action.payload);
-        return {...state, projects: action.payload, featured: featuredProjects, displayedProjects: action.payload, types: uniqueTypes, err: false, isLoading: false }
+        const featuredQaProjects = projectsQa.filter(project => {
+            if(project.featured) return project
+        });
+        const uniqueTypes = getUniqueTypes(projectsWeb);
+        return {
+          ...state,
+          projectsWeb: projectsWeb,
+          featuredWeb: featuredWebProjects,
+          displayedProjectsWeb: projectsWeb,
+          types: uniqueTypes,
+          projectsQa,
+          featuredQa: featuredQaProjects,
+          err: false,
+          isLoading: false,
+        };
     }
     if(action.type === FILTER){
         const filterType = action.payload;
-        if(filterType === "all") return {...state, displayedProjects: state.projects}
+        if(filterType === "all") return {...state, displayedProjectsWeb: state.projectsWeb}
         else {
-            const tmpArray = state.projects.filter(project => project.type === filterType)
-            return {...state, displayedProjects: tmpArray}
+            const tmpArray = state.projectsWeb.filter(project => project.type === filterType)
+            return {...state, displayedProjectsWeb: tmpArray}
         }
     }
     else {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import aboutImg from "../assets/images/my-app.svg";
+import aboutImg from "../../assets/images/my-app.svg";
 
 const AboutTwo = () => {
     return (  

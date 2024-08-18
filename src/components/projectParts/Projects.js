@@ -1,8 +1,8 @@
 import Card from "./Card";
 import styled from "styled-components";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
-const Projects = ({ selectedProjects }) => {
+const Projects = ({ selectedProjects, isQa }) => {
     const { isLoading, err } = useGlobalContext();
     
     if(isLoading) return <div className="loading"></div>
@@ -17,7 +17,7 @@ const Projects = ({ selectedProjects }) => {
     if(selectedProjects.length < 1) return <h4 className="ta-center capitalize">The are no projects left...</h4>
     return (  
         <Wrapper>
-            {selectedProjects.map(project => <Card key={project.id} {...project} />)}
+            {selectedProjects.map(project => <Card key={project.id} {...project} isQa={isQa} />)}
         </Wrapper>
     )
 }
@@ -28,6 +28,7 @@ const Wrapper = styled.div`
 `
 const ErrWrapper = styled.div`
     text-align: center;
+    margin-bottom: 16px;
 
     h4 {
         color: #e0e7ff;

@@ -1,11 +1,15 @@
-import { Hero, Featured, AllProjects } from "../components";
+import { Helmet } from "react-helmet";
+import { HomeHero, FeaturedWeb, FeaturedQa } from "../components";
 
 const HomePage = () => {
     return (  
         <>
-            <Hero />
-            <Featured />
-            <AllProjects />
+            <Helmet>
+                <title>Home - NBojan</title>
+            </Helmet>
+            <HomeHero />
+            <FeaturedWeb />
+            <FeaturedQa />
         </>
     );
 }

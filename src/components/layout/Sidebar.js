@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import links from "../assets/constants/links";
+import links from "../../assets/constants/links";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
 const Sidebar = () => {
     const { showSide, toggleSide } = useGlobalContext();

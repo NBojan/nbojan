@@ -5,14 +5,17 @@ import { SET_LOADING, SET_ERROR, SET_PROJECTS, FILTER } from "./assets/constants
 
 const initialState = {
     isLoading: true,
-    projects: [],
-    featured: [],
-    displayedProjects: [],
+    projectsWeb: [],
+    featuredWeb: [],
+    displayedProjectsWeb: [],
     types: [],
+    projectsQa: [],
+    featuredQa: [],
     err: false
 }
 
 const url = "https://nbojan.netlify.app/api/nb-all";
+const qaUrl = "https://nbojan.netlify.app/api/nb-qa-all";
 
 const AppContext = createContext();
 
@@ -25,11 +28,17 @@ export const AppProvider = ({ children }) => {
     const fetchData = async () => {
         dispatch({type: SET_LOADING});
 
-        const response = await axios(url)
-        .catch(err => dispatch({type: SET_ERROR, payload: err.message}));
+        const responseWeb = await axios(url)
+        .catch(err => console.log(err.message));
+        const responseQa = await axios(qaUrl)
+        .catch(err => console.log(err.message));
 
-        if(response){
-            dispatch({type: SET_PROJECTS, payload: response.data});
+        if(responseWeb && responseQa){
+            const projects = { projectsWeb: responseWeb.data, projectsQa: responseQa.data }
+            dispatch({type: SET_PROJECTS, payload: projects});
+        }
+        else {
+            dispatch({type: SET_ERROR, payload: "There was an error."})
         }
     }
     const filter = (type) => dispatch({type: FILTER, payload: type});

@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import links from "../assets/constants/links";
-import logo from "../assets/images/logo/FQ.svg";
+import links from "../../assets/constants/links";
+import logo from "../../assets/images/logo/FQ.svg";
 import { Link } from "react-router-dom";
 import { CgMenuRightAlt } from "react-icons/cg";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 
 const Navbar = () => {
     const { toggleSide } = useGlobalContext();

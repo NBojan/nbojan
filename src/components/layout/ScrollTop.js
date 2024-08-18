@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../../context";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
 const ScrollTop = () => {

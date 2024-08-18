@@ -1,7 +1,7 @@
-import { Projects, Filters } from "./index";
 import styled from "styled-components";
+import { Projects, Filters } from "../index";
 
-const ProjectsContainer = ({ title="default", projects=[], filters }) => {
+const ProjectsContainer = ({ title="default", projects=[], filters, isQa }) => {
     return (  
         <Wrapper className="containerBoot m-auto">
             <div className="title">
@@ -11,7 +11,7 @@ const ProjectsContainer = ({ title="default", projects=[], filters }) => {
 
             {filters && <Filters />}
 
-            <Projects selectedProjects={projects} />
+            <Projects selectedProjects={projects} isQa={isQa} />
         </Wrapper>
     );
 }

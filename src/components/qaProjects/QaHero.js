@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import heroImg from "../assets/images/programming.svg";
+import heroImg from "../../assets/images/testing.svg";
 
-const Hero = () => {
+const ProjectsHero = () => {
     return (  
         <Wrapper className="hero bg-filler">
             <article className="containerBoot m-auto container">
                 <div className="info-div">
-                    <h2 className="capitalize">Project page <span>NBojan</span></h2>
+                    <h2 className="capitalize"><span>NBojan</span> QA projects</h2>
                     <p className="light-col">
-                        Welcome! NB Projects is a web page that displays different projects made for the purpose of presenting my work.
-                        Links available to visit or check out the source code on Github.
+                        Here, you'll find a collection of my testing projects, 
+                        showcasing my skills in manual and automation testing.
                     </p>
                 </div>
 
@@ -25,7 +25,7 @@ const Wrapper = styled.section`
     display: flex;
     min-height: 100vh;
     padding: 7rem 0 2rem;
-    background: linear-gradient(90deg, var(--clr-primary-1) 60%, rgba(255,255,255,1) 60%);
+    background: linear-gradient(225deg, rgba(255,255,255,1) 40%, var(--clr-primary-1) 60%);
 
     .container {
         width: 100%;
@@ -83,4 +83,4 @@ const Wrapper = styled.section`
         }
     }
 `
-export default Hero;
+export default ProjectsHero;
