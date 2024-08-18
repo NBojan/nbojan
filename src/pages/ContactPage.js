@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const ContactPage = () => {
+    
+    useEffect(() => {
+        const prevTitle = document.title;
+        document.title = "Contact - NBojan";
+        return () => document.title= prevTitle
+    }, []);
+
     return (  
         <Wrapper className="full-page contact-page">
             <article className="containerBoot m-auto form-cont">

@@ -1,8 +1,16 @@
 import styled from "styled-components";
 import errorImg from "../assets/images/stars.svg";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
+
+    useEffect(() => {
+        const prevTitle = document.title;
+        document.title = "Oops - NBojan";
+        return () => document.title= prevTitle
+    }, []);
+
     return (  
         <Wrapper>
             <div className="cont">
