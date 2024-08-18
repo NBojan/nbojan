@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import errorImg from "../assets/images/stars.svg";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (  
         <Wrapper>
-            <Helmet>
-                <title>Oops - NBojan</title>
-            </Helmet>
             <div className="cont">
                 <img src={errorImg} alt="404 Error" className="w100"/>
                 <div className="ta-center mt-24">

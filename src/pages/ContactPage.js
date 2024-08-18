@@ -1,12 +1,8 @@
 import styled from "styled-components";
-import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
     return (  
         <Wrapper className="full-page contact-page">
-            <Helmet>
-                <title>Contact - NBojan</title>
-            </Helmet>
             <article className="containerBoot m-auto form-cont">
                 <form className="shadow" action="https://formspree.io/f/xrgvqpkd" method="POST">
                     <header className="title">
